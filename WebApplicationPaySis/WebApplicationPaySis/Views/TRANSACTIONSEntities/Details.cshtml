@@ -1,0 +1,106 @@
+﻿@model WebApplicationPaySis.Models.TRANSACTIONSEntities
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TRANSACTIONSEntities</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.STEP_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STEP_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TYPE_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TYPE_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AMOUNT_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMOUNT_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMEORIG_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMEORIG_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OLDBALANCEORG_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OLDBALANCEORG_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NEWBALANCEORIG_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEWBALANCEORIG_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMEDEST_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMEDEST_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OLDBALANCEDEST_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OLDBALANCEDEST_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NEWBALANCEDEST_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEWBALANCEDEST_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISFRAUD_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISFRAUD_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISFLAGGEDFRAUD_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISFLAGGEDFRAUD_TRANSACTION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TRANSACTION }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

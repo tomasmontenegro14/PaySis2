@@ -1,0 +1,112 @@
+﻿@model WebApplicationPaySis.Models.TRANSACTIONSEntities
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TRANSACTIONSEntities</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.STEP_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STEP_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TYPE_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TYPE_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AMOUNT_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMOUNT_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMEORIG_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMEORIG_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OLDBALANCEORG_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OLDBALANCEORG_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NEWBALANCEORIG_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEWBALANCEORIG_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMEDEST_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMEDEST_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OLDBALANCEDEST_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OLDBALANCEDEST_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NEWBALANCEDEST_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEWBALANCEDEST_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISFRAUD_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISFRAUD_TRANSACTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISFLAGGEDFRAUD_TRANSACTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISFLAGGEDFRAUD_TRANSACTION)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

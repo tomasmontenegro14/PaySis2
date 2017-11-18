@@ -1,0 +1,98 @@
+﻿@model IEnumerable<WebApplicationPaySis.Models.TRANSACTIONSEntities>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.STEP_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPE_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AMOUNT_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAMEORIG_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OLDBALANCEORG_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NEWBALANCEORIG_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAMEDEST_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OLDBALANCEDEST_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NEWBALANCEDEST_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISFRAUD_TRANSACTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISFLAGGEDFRAUD_TRANSACTION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.STEP_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPE_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMOUNT_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMEORIG_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OLDBALANCEORG_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NEWBALANCEORIG_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMEDEST_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OLDBALANCEDEST_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NEWBALANCEDEST_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISFRAUD_TRANSACTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISFLAGGEDFRAUD_TRANSACTION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_TRANSACTION }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_TRANSACTION }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_TRANSACTION })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

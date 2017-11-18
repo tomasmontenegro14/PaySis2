@@ -1,0 +1,44 @@
+﻿@model WebApplicationPaySis.Models.USERSEntities
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+<p>
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @if (@ViewBag.Message != null)
+    {
+        <div style="border: 1px solid red">
+            @ViewBag.Message
+        </div>
+    } 
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Log in</h2>
+        <p>
+            @Html.LabelFor(a => a.USERNAME)
+            @Html.TextBoxFor(a => a.USERNAME)
+            @Html.ValidationMessageFor(a => a.USERNAME)
+
+        </p>
+
+        <p>
+            @Html.LabelFor(a => a.PASSWORD)
+            @Html.PasswordFor(a => a.PASSWORD)
+        </p>
+
+
+
+        <p>
+            <input type = "submit" value = "Login" class="btn btn-default" />
+        </p>
+    </div>
+</div>
+
+
+}
