@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PaysisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TransactionEntity">
+    <Key>
+      <PropertyRef Name="ID_TRANSACTION" />
+    </Key>
+    <Property Name="ID_TRANSACTION" Type="Int32" Nullable="false" />
+    <Property Name="STEP_TRANSACTION" Type="Int32" />
+    <Property Name="TYPE_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AMOUNT_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NAMEORIG_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OLDBALANCEORG_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NEWBALANCEORIG_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NAMEDEST_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OLDBALANCEDEST_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NEWBALANCEDEST_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ISFRAUD_TRANSACTION" Type="Int32" />
+    <Property Name="ISFLAGGEDFRAUD_TRANSACTION" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="PaysisEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TransactionEntities" EntityType="PaysisModel.TransactionEntity" />
+  </EntityContainer>
+</Schema>

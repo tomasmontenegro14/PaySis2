@@ -1,0 +1,13 @@
+<publishData>
+  <publishTarget publishUrl="C:\Users\Tomas\Documents\PruebaZemoga\WS\">
+    <file relUrl="Web.config" publishTime="11/16/2017 23:12:18" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="01/04/2017 00:44:10" />
+    <file relUrl="bin/WcfSLPay.dll" publishTime="11/17/2017 08:40:57" />
+    <file relUrl="bin/WcfSLPay.dll.config" publishTime="11/16/2017 23:12:18" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="01/04/2017 00:44:10" />
+    <file relUrl="bin/WcfSLPay.pdb" publishTime="11/17/2017 08:40:57" />
+    <file relUrl="Paysis.Context.tt" publishTime="11/16/2017 22:28:36" />
+    <file relUrl="WcfSLPay.PayTranService.svc" publishTime="11/17/2017 08:42:06" />
+    <file relUrl="Paysis.tt" publishTime="11/16/2017 22:29:33" />
+  </publishTarget>
+</publishData>

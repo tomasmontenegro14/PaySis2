@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PaysisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DIM_TRANSACTIONS">
+          <Key>
+            <PropertyRef Name="ID_TRANSACTION" />
+          </Key>
+          <Property Name="ID_TRANSACTION" Type="int" Nullable="false" />
+          <Property Name="STEP_TRANSACTION" Type="int" />
+          <Property Name="TYPE_TRANSACTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="AMOUNT_TRANSACTION" Type="money" />
+          <Property Name="NAMEORIG_TRANSACTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="OLDBALANCEORG_TRANSACTION" Type="money" />
+          <Property Name="NEWBALANCEORIG_TRANSACTION" Type="money" />
+          <Property Name="NAMEDEST_TRANSACTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="OLDBALANCEDEST_TRANSACTION" Type="money" />
+          <Property Name="NEWBALANCEDEST_TRANSACTION" Type="money" />
+          <Property Name="ISFRAUD_TRANSACTION" Type="int" />
+          <Property Name="ISFLAGGEDFRAUD_TRANSACTION" Type="int" />
+        </EntityType>
+        <EntityContainer Name="PaysisModelStoreContainer">
+          <EntitySet Name="DIM_TRANSACTIONS" EntityType="Self.DIM_TRANSACTIONS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PaysisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TransactionEntity">
+          <Key>
+            <PropertyRef Name="ID_TRANSACTION" />
+          </Key>
+          <Property Name="ID_TRANSACTION" Type="Int32" Nullable="false" />
+          <Property Name="STEP_TRANSACTION" Type="Int32" />
+          <Property Name="TYPE_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AMOUNT_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NAMEORIG_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OLDBALANCEORG_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NEWBALANCEORIG_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NAMEDEST_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OLDBALANCEDEST_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NEWBALANCEDEST_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ISFRAUD_TRANSACTION" Type="Int32" />
+          <Property Name="ISFLAGGEDFRAUD_TRANSACTION" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="PaysisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TransactionEntities" EntityType="PaysisModel.TransactionEntity" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PaysisModelStoreContainer" CdmEntityContainer="PaysisEntities">
+          <EntitySetMapping Name="TransactionEntities">
+            <EntityTypeMapping TypeName="PaysisModel.TransactionEntity">
+              <MappingFragment StoreEntitySet="DIM_TRANSACTIONS">
+                <ScalarProperty Name="ID_TRANSACTION" ColumnName="ID_TRANSACTION" />
+                <ScalarProperty Name="STEP_TRANSACTION" ColumnName="STEP_TRANSACTION" />
+                <ScalarProperty Name="TYPE_TRANSACTION" ColumnName="TYPE_TRANSACTION" />
+                <ScalarProperty Name="AMOUNT_TRANSACTION" ColumnName="AMOUNT_TRANSACTION" />
+                <ScalarProperty Name="NAMEORIG_TRANSACTION" ColumnName="NAMEORIG_TRANSACTION" />
+                <ScalarProperty Name="OLDBALANCEORG_TRANSACTION" ColumnName="OLDBALANCEORG_TRANSACTION" />
+                <ScalarProperty Name="NEWBALANCEORIG_TRANSACTION" ColumnName="NEWBALANCEORIG_TRANSACTION" />
+                <ScalarProperty Name="NAMEDEST_TRANSACTION" ColumnName="NAMEDEST_TRANSACTION" />
+                <ScalarProperty Name="OLDBALANCEDEST_TRANSACTION" ColumnName="OLDBALANCEDEST_TRANSACTION" />
+                <ScalarProperty Name="NEWBALANCEDEST_TRANSACTION" ColumnName="NEWBALANCEDEST_TRANSACTION" />
+                <ScalarProperty Name="ISFRAUD_TRANSACTION" ColumnName="ISFRAUD_TRANSACTION" />
+                <ScalarProperty Name="ISFLAGGEDFRAUD_TRANSACTION" ColumnName="ISFLAGGEDFRAUD_TRANSACTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

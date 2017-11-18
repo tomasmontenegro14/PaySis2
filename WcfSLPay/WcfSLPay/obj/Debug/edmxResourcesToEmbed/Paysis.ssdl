@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PaysisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DIM_TRANSACTIONS">
+    <Key>
+      <PropertyRef Name="ID_TRANSACTION" />
+    </Key>
+    <Property Name="ID_TRANSACTION" Type="int" Nullable="false" />
+    <Property Name="STEP_TRANSACTION" Type="int" />
+    <Property Name="TYPE_TRANSACTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="AMOUNT_TRANSACTION" Type="money" />
+    <Property Name="NAMEORIG_TRANSACTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="OLDBALANCEORG_TRANSACTION" Type="money" />
+    <Property Name="NEWBALANCEORIG_TRANSACTION" Type="money" />
+    <Property Name="NAMEDEST_TRANSACTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="OLDBALANCEDEST_TRANSACTION" Type="money" />
+    <Property Name="NEWBALANCEDEST_TRANSACTION" Type="money" />
+    <Property Name="ISFRAUD_TRANSACTION" Type="int" />
+    <Property Name="ISFLAGGEDFRAUD_TRANSACTION" Type="int" />
+  </EntityType>
+  <EntityContainer Name="PaysisModelStoreContainer">
+    <EntitySet Name="DIM_TRANSACTIONS" EntityType="Self.DIM_TRANSACTIONS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

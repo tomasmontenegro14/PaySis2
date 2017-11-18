@@ -1,0 +1,9 @@
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\bin\Debug\WcfSLPay.dll.config
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\bin\Debug\WcfSLPay.dll
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\bin\Debug\WcfSLPay.pdb
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\obj\Debug\WcfSLPay.csproj.CoreCompileInputs.cache
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\obj\Debug\WcfSLPay.dll
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\obj\Debug\WcfSLPay.pdb
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\bin\Debug\EntityFramework.dll
+c:\users\tomas\source\repos\WcfSLPay\WcfSLPay\bin\Debug\EntityFramework.xml
+C:\Users\Tomas\source\repos\WcfSLPay\WcfSLPay\obj\Debug\WcfSLPay.csprojResolveAssemblyReference.cache
