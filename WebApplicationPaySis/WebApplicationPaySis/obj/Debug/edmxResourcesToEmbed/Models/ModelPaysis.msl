@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PaysisModelStoreContainer" CdmEntityContainer="PaysisEntities">
+    <EntitySetMapping Name="ACCOUNTSEntities">
+      <EntityTypeMapping TypeName="PaysisModel.ACCOUNTSEntities">
+        <MappingFragment StoreEntitySet="DIM_ACCOUNTS">
+          <ScalarProperty Name="ID_ACCOUNT" ColumnName="ID_ACCOUNT" />
+          <ScalarProperty Name="NUM_ACCOUNT" ColumnName="NUM_ACCOUNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLESEntities">
+      <EntityTypeMapping TypeName="PaysisModel.ROLESEntities">
+        <MappingFragment StoreEntitySet="DIM_ROLES_USER">
+          <ScalarProperty Name="ID_ROLEUSER" ColumnName="ID_ROLEUSER" />
+          <ScalarProperty Name="NAME_ROLE" ColumnName="NAME_ROLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSACTIONSEntities">
+      <EntityTypeMapping TypeName="PaysisModel.TRANSACTIONSEntities">
+        <MappingFragment StoreEntitySet="DIM_TRANSACTIONS">
+          <ScalarProperty Name="ID_TRANSACTION" ColumnName="ID_TRANSACTION" />
+          <ScalarProperty Name="STEP_TRANSACTION" ColumnName="STEP_TRANSACTION" />
+          <ScalarProperty Name="TYPE_TRANSACTION" ColumnName="TYPE_TRANSACTION" />
+          <ScalarProperty Name="AMOUNT_TRANSACTION" ColumnName="AMOUNT_TRANSACTION" />
+          <ScalarProperty Name="NAMEORIG_TRANSACTION" ColumnName="NAMEORIG_TRANSACTION" />
+          <ScalarProperty Name="OLDBALANCEORG_TRANSACTION" ColumnName="OLDBALANCEORG_TRANSACTION" />
+          <ScalarProperty Name="NEWBALANCEORIG_TRANSACTION" ColumnName="NEWBALANCEORIG_TRANSACTION" />
+          <ScalarProperty Name="NAMEDEST_TRANSACTION" ColumnName="NAMEDEST_TRANSACTION" />
+          <ScalarProperty Name="OLDBALANCEDEST_TRANSACTION" ColumnName="OLDBALANCEDEST_TRANSACTION" />
+          <ScalarProperty Name="NEWBALANCEDEST_TRANSACTION" ColumnName="NEWBALANCEDEST_TRANSACTION" />
+          <ScalarProperty Name="ISFRAUD_TRANSACTION" ColumnName="ISFRAUD_TRANSACTION" />
+          <ScalarProperty Name="ISFLAGGEDFRAUD_TRANSACTION" ColumnName="ISFLAGGEDFRAUD_TRANSACTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TYPESTRANSACTIONEntities">
+      <EntityTypeMapping TypeName="PaysisModel.TYPESTRANSACTIONEntities">
+        <MappingFragment StoreEntitySet="DIM_TYPES_TRANSACTION">
+          <ScalarProperty Name="ID_TYPE_TRANSACTION" ColumnName="ID_TYPE_TRANSACTION" />
+          <ScalarProperty Name="DESC_TYPE_TRX" ColumnName="DESC_TYPE_TRX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERSEntities">
+      <EntityTypeMapping TypeName="PaysisModel.USERSEntities">
+        <MappingFragment StoreEntitySet="DIM_USERS">
+          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ID_ROLEUSER" ColumnName="ID_ROLEUSER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

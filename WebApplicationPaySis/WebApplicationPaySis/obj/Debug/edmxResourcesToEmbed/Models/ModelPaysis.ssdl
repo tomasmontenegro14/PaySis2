@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PaysisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DIM_ACCOUNTS">
+    <Key>
+      <PropertyRef Name="ID_ACCOUNT" />
+    </Key>
+    <Property Name="ID_ACCOUNT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NUM_ACCOUNT" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DIM_ROLES_USER">
+    <Key>
+      <PropertyRef Name="ID_ROLEUSER" />
+    </Key>
+    <Property Name="ID_ROLEUSER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME_ROLE" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DIM_TRANSACTIONS">
+    <Key>
+      <PropertyRef Name="ID_TRANSACTION" />
+    </Key>
+    <Property Name="ID_TRANSACTION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STEP_TRANSACTION" Type="int" />
+    <Property Name="TYPE_TRANSACTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="AMOUNT_TRANSACTION" Type="money" />
+    <Property Name="NAMEORIG_TRANSACTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="OLDBALANCEORG_TRANSACTION" Type="money" />
+    <Property Name="NEWBALANCEORIG_TRANSACTION" Type="money" />
+    <Property Name="NAMEDEST_TRANSACTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="OLDBALANCEDEST_TRANSACTION" Type="money" />
+    <Property Name="NEWBALANCEDEST_TRANSACTION" Type="money" />
+    <Property Name="ISFRAUD_TRANSACTION" Type="int" />
+    <Property Name="ISFLAGGEDFRAUD_TRANSACTION" Type="int" />
+  </EntityType>
+  <EntityType Name="DIM_TYPES_TRANSACTION">
+    <Key>
+      <PropertyRef Name="ID_TYPE_TRANSACTION" />
+    </Key>
+    <Property Name="ID_TYPE_TRANSACTION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_TYPE_TRX" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DIM_USERS">
+    <Key>
+      <PropertyRef Name="ID_USER" />
+    </Key>
+    <Property Name="ID_USER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ID_ROLEUSER" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PaysisModelStoreContainer">
+    <EntitySet Name="DIM_ACCOUNTS" EntityType="Self.DIM_ACCOUNTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DIM_ROLES_USER" EntityType="Self.DIM_ROLES_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DIM_TRANSACTIONS" EntityType="Self.DIM_TRANSACTIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DIM_TYPES_TRANSACTION" EntityType="Self.DIM_TYPES_TRANSACTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DIM_USERS" EntityType="Self.DIM_USERS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

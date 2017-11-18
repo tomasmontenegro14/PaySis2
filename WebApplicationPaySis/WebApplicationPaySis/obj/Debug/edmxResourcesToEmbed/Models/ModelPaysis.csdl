@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PaysisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACCOUNTSEntities">
+    <Key>
+      <PropertyRef Name="ID_ACCOUNT" />
+    </Key>
+    <Property Name="ID_ACCOUNT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NUM_ACCOUNT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ROLESEntities">
+    <Key>
+      <PropertyRef Name="ID_ROLEUSER" />
+    </Key>
+    <Property Name="ID_ROLEUSER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME_ROLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRANSACTIONSEntities">
+    <Key>
+      <PropertyRef Name="ID_TRANSACTION" />
+    </Key>
+    <Property Name="ID_TRANSACTION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STEP_TRANSACTION" Type="Int32" />
+    <Property Name="TYPE_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AMOUNT_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NAMEORIG_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OLDBALANCEORG_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NEWBALANCEORIG_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NAMEDEST_TRANSACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OLDBALANCEDEST_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NEWBALANCEDEST_TRANSACTION" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ISFRAUD_TRANSACTION" Type="Int32" />
+    <Property Name="ISFLAGGEDFRAUD_TRANSACTION" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TYPESTRANSACTIONEntities">
+    <Key>
+      <PropertyRef Name="ID_TYPE_TRANSACTION" />
+    </Key>
+    <Property Name="ID_TYPE_TRANSACTION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESC_TYPE_TRX" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="USERSEntities">
+    <Key>
+      <PropertyRef Name="ID_USER" />
+    </Key>
+    <Property Name="ID_USER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_ROLEUSER" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PaysisEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACCOUNTSEntities" EntityType="PaysisModel.ACCOUNTSEntities" />
+    <EntitySet Name="ROLESEntities" EntityType="PaysisModel.ROLESEntities" />
+    <EntitySet Name="TRANSACTIONSEntities" EntityType="PaysisModel.TRANSACTIONSEntities" />
+    <EntitySet Name="TYPESTRANSACTIONEntities" EntityType="PaysisModel.TYPESTRANSACTIONEntities" />
+    <EntitySet Name="USERSEntities" EntityType="PaysisModel.USERSEntities" />
+  </EntityContainer>
+</Schema>
